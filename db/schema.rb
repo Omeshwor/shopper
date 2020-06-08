@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2020_06_08_050051) do
 
   add_foreign_key "order_items", "orders", name: "fk_order_items_to_order"
   add_foreign_key "order_items", "products", name: "fk_order_items_to_product"
-  add_foreign_key "product_categories", "categories"
-  add_foreign_key "product_categories", "products"
+  add_foreign_key "product_categories", "categories", name: "fk_product_categories_to_categories"
+  add_foreign_key "product_categories", "products", name: "fk_product_categories_to_products"
   add_foreign_key "product_variants", "products", name: "fk_product_variants_to_product"
 end
